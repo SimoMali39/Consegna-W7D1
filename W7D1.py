@@ -1,6 +1,9 @@
+import re
+
 def lunghezze_parole():
     # Chiedi all'utente di inserire le parole separate da spazi
     input_utente = input("Inserisci parole separate da spazi: ")
+    input_utente = re.sub(r"[^\w\s]", "", input_utente)
     # Dividi la stringa di input in una lista di parole
     lista_parole = input_utente.split()
     # Calcola le lunghezze delle parole
